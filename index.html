@@ -1,11 +1,752 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> sky-vault | Dashboard</title>
+    <link rel="shortcut icon" href="/assets/imgs/logo.png" type="image/x-icon">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <!-- google fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+    </style>
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="/assets/style.css">
+
+
 </head>
+
 <body>
-    
+
+    <section class=" " style="overflow: hidden; height: 100vh;">
+        <div class="row">
+            <!-- sidebar -->
+            <div class="col-lg-2  p-3">
+                <div class="container">
+                    <div class="d-flex flex-wrap flex-column align-items-start justify-content-between ">
+                        <div class="">
+                            <div class="d-flex align-items-center ms-2">
+                                <div class="d-flex align-items-center justify-content-center rounded-pill logo-holder px-2 py-3"
+                                    id="logo-holder">
+                                    <img src="/assets//imgs/logo.png" alt="" class="logo">
+                                </div>
+                                <div class="ms-3">
+                                    <h1 class="logo-text" id="logo-text">Sky Vault</h1>
+                                    <span class="slogan">Lovely file storage</span>
+                                </div>
+                            </div>
+                            <div class="navlinks ms-2 mt-5">
+                                <a href="#" class="navlink d-flex align-items-center my-4">
+                                    <span class="me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22"
+                                            height="22" fill="currentColor">
+                                            <path
+                                                d="M12.97 2.59a1.5 1.5 0 0 0-1.94 0l-7.5 6.363A1.5 1.5 0 0 0 3 10.097V19.5A1.5 1.5 0 0 0 4.5 21h4.75a.75.75 0 0 0 .75-.75V14h4v6.25c0 .414.336.75.75.75h4.75a1.5 1.5 0 0 0 1.5-1.5v-9.403a1.5 1.5 0 0 0-.53-1.144l-7.5-6.363Z">
+                                            </path>
+                                        </svg>
+                                    </span> <span class="">Dashobord</span>
+                                </a>
+                                <a href="#" class="navlink d-flex align-items-center my-4">
+                                    <span class="me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                                            fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
+                                        </svg>
+                                    </span> <span class="">Shared With Me</span>
+                                </a>
+                                <a href="#" class="navlink d-flex align-items-center my-4">
+                                    <span class="me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                                            fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                        </svg>
+                                    </span> <span class="">Favourite</span>
+                                </a>
+                                <a href="#" class="navlink d-flex align-items-center my-4">
+                                    <span class="me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                                            fill="currentColor" class="bi bi-collection-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zM2 3a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11A.5.5 0 0 0 2 3m2-2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7A.5.5 0 0 0 4 1" />
+                                        </svg>
+                                    </span> <span class="">Recent</span>
+                                </a>
+                                <a href="#" class="navlink d-flex align-items-center my-4">
+                                    <span class="me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                                            fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" />
+                                        </svg>
+                                    </span> <span class="">Deleted Files</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ms-2">
+                            <div class="dropzone d-flex align-items-center justify-content-center flex-column rounded">
+                                <span class="navlink text-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                        class="bi bi-cloud-arrow-up-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2m2.354 5.146a.5.5 0 0 1-.708.708L8.5 6.707V10.5a.5.5 0 0 1-1 0V6.707L6.354 7.854a.5.5 0 1 1-.708-.708l2-2a.5.5 0 0 1 .708 0z" />
+                                    </svg>
+                                </span>
+                                <span class="text-center px-3">Drag and Drop files or <span
+                                        class="browse-link">Browse</span></span>
+                            </div>
+                            <hr class="mx-2 mt-5">
+                            <div class="mt-4">
+                                <a href="#" class="navlink d-flex align-items-center my-4">
+                                    <span class="me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                            class="bi bi-gear-fill icon" viewBox="0 0 16 16">
+                                            <path
+                                                d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
+                                        </svg>
+                                    </span> <span class="">Setting</span>
+                                </a>
+                                <a href="#" class="navlink d-flex align-items-center my-4">
+                                    <span class="me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                                            fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z" />
+                                            <path fill-rule="evenodd"
+                                                d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z" />
+                                        </svg>
+                                    </span> <span class="">Log Out</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-10 main-section px-0">
+
+                <div class="main-header py-3 d-flex align-items-center justify-content-between px-3">
+                    <!-- search bar -->
+                    <div class="search-placeholder d-flex align-items-center rounded-pill px-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                        </svg>
+                        <input type="text" class="py-2 mx-3 border-0 search-box" placeholder="Search for your files..."
+                            style="background-color: transparent;">
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <!-- theme button -->
+                        <div class="">
+                            <div class="mx-3" id="dark-mode">
+                                <div class="d-flex align-items-center">
+                                    <button class="theme-button-dark">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-moon-stars-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278" />
+                                            <path
+                                                d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z" />
+                                        </svg>
+                                    </button>
+                                    <span class="ms-2 theme-text">Dark Mode</span>
+                                </div>
+                            </div>
+                            <div class="light-mode mx-3" id="light-mode">
+                                <div class="d-flex align-items-center">
+                                    <button class="theme-button-light">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-moon-stars-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278" />
+                                            <path
+                                                d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z" />
+                                        </svg>
+                                    </button>
+                                    <span class="ms-2 theme-text">Light Mode</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <button class="btn-notification  rounded-pill px-2 py-1 mx-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-bell-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901" />
+                            </svg>
+                        </button>
+                        <div class="d-flex align-items-center mx-3">
+                            <img src="/assets/imgs/3.jpg" alt="" class="img-fluid rounded-pill user-img">
+                            <button class="btn-user ms-2">
+                                Philipp Omega
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-header py-2 px-3">
+                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#" class="text-black"
+                                    style="text-decoration: none;">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                        </ol>
+                    </nav>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h2 class="dashboard-text">Dashboard</h2>
+                        <button class="create-btn rounded-pill px-3 py-2 me-3 mb-2"> + Create New</button>
+                    </div>
+                </div>
+                <main>
+                    <div class="row gx-5 px-3 pt-2">
+                        <div class="col-lg-6">
+                            <h2 class="folders-text">Folders</h2>
+                            <div class="row px-2 pt-2">
+                                <div class="col-lg-5 folders-card rounded-3 card m-2" id="folders-card">
+                                    <div class="d-flex align-items-center ms-1">
+                                        <div
+                                            class="icon-holder d-flex rounded-3 align-items-center justify-content-center px-2 py-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                                class="bi bi-folder-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3m-8.322.12q.322-.119.684-.12h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981z" />
+                                            </svg>
+                                        </div>
+                                        <div class="ms-2">
+                                            <h3 class="folders-name">Design Docs</h3>
+                                            <p class="file-counter">10 Files</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between mt-2">
+                                        <p class="file-size">290 MB used</p>
+                                        <p class="file-counter">05-08-23</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 folders-card rounded-3 card m-2" id="folders-card">
+                                    <div class="d-flex align-items-center ms-1">
+                                        <div
+                                            class="icon-holder d-flex rounded-3 align-items-center justify-content-center px-2 py-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" style="color: #6B5B9A;"
+                                                fill="currentColor" class="bi bi-folder-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3m-8.322.12q.322-.119.684-.12h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981z" />
+                                            </svg>
+                                        </div>
+                                        <div class="ms-2">
+                                            <h3 class="folders-name">Converted Docs</h3>
+                                            <p class="file-counter">10 Files</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between mt-2">
+                                        <p class="file-size">98 MB used</p>
+                                        <p class="file-counter">05-08-23</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row px-2">
+                                <div class="col-lg-5 folders-card rounded-3 card m-2" id="folders-card">
+                                    <div class="d-flex align-items-center ms-1">
+                                        <div
+                                            class="icon-holder d-flex rounded-3 align-items-center justify-content-center px-2 py-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" style="color: #899A5C;"
+                                                fill="currentColor" class="bi bi-folder-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3m-8.322.12q.322-.119.684-.12h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981z" />
+                                            </svg>
+                                        </div>
+                                        <div class="ms-2">
+                                            <h3 class="folders-name">Urgent Folders</h3>
+                                            <p class="file-counter">10 Files</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between mt-2">
+                                        <p class="file-size">201 MB used</p>
+                                        <p class="file-counter">05-08-23</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 folders-card rounded-3 card m-2" id="folders-card">
+                                    <div class="d-flex align-items-center ms-1">
+                                        <div
+                                            class="icon-holder d-flex rounded-3 align-items-center justify-content-center px-2 py-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" style="color: #9A5A6A;"
+                                                fill="currentColor" class="bi bi-folder-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3m-8.322.12q.322-.119.684-.12h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981z" />
+                                            </svg>
+                                        </div>
+                                        <div class="ms-2">
+                                            <h3 class="folders-name">Client's Brief</h3>
+                                            <p class="file-counter">10 Files</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between mt-2">
+                                        <p class="file-size">302 MB used</p>
+                                        <p class="file-counter">05-08-23</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-6">
+                            <h2 class="folders-text">Recently Opened</h2>
+                            <div class="row px-2 pt-2">
+                                <div class="col-lg-5 open-folders-card rounded-3 card m-2 py-2" id="folders-card">
+                                    <img src="/assets/imgs/7d4812179116793.64f440f764839.png" alt=""
+                                        class="rounded-3 open-folder-img">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="">
+                                            <p class="open-folder-name"> UX Gemastik</p>
+                                            <p class="last-edit-text">Last Edit 09:24pm</p>
+                                        </div>
+                                        <img src="/assets/imgs/2.jpg" alt=""
+                                            class="img-fluid rounded-pill folder-owner">
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 open-folders-card rounded-3 card m-2 py-2" id="folders-card">
+                                    <img src="/assets/imgs/b60c13183157697.653a65b927781.png" alt=""
+                                        class="rounded-3 open-folder-img">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="">
+                                            <p class="open-folder-name"> Smart Home Dasboard</p>
+                                            <p class="last-edit-text">Last Edit 10:02am</p>
+                                        </div>
+                                        <img src="/assets/imgs/1.jpg" alt=""
+                                            class="img-fluid rounded-pill folder-owner">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row p-3">
+                        <div class="col-lg-8 mt-2">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h2 class="folders-text">Files</h2>
+                                <button class="view-more-btn rounded-pill py-1 px-2">View More</button>
+                            </div>
+                            <div class="row mt-2 mx-2">
+                                <div class="col-lg-3">
+                                    <span class="document-filter">Document Name <span class="">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                            </svg>
+                                        </span></span>
+                                </div>
+                                <div class="col-lg-2 ms-2">
+                                    <span class="document-filter">Last Edit <span class="">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                            </svg>
+                                        </span></span>
+                                </div>
+                                <div class="col-lg-2">
+                                    <span class="document-filter">File Size <span class="">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                            </svg>
+                                        </span></span>
+                                </div>
+                                <div class="col-lg-2">
+                                    <span class="document-filter">Member <span class="">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                            </svg>
+                                        </span></span>
+                                </div>
+                            </div>
+                            <div class="files-placeholder mt-3 p-2" x-data="{fileAction: false}">
+                                <div class="file-holder my-2 ">
+                                    <div class="row mx-2 py-1 align-items-center ">
+                                        <div class="col-lg-3 ">
+                                            <div class="d-flex align-items-center">
+                                                <div
+                                                    class="card d-flex rounded-3 align-items-center justify-content-center px-2 py-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" style="color: rgb(209, 49, 49);" width="16" height="16" fill="currentColor" class="bi bi-filetype-pdf" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zM1.6 11.85H0v3.999h.791v-1.342h.803q.43 0 .732-.173.305-.175.463-.474a1.4 1.4 0 0 0 .161-.677q0-.375-.158-.677a1.2 1.2 0 0 0-.46-.477q-.3-.18-.732-.179m.545 1.333a.8.8 0 0 1-.085.38.57.57 0 0 1-.238.241.8.8 0 0 1-.375.082H.788V12.48h.66q.327 0 .512.181.185.183.185.522m1.217-1.333v3.999h1.46q.602 0 .998-.237a1.45 1.45 0 0 0 .595-.689q.196-.45.196-1.084 0-.63-.196-1.075a1.43 1.43 0 0 0-.589-.68q-.396-.234-1.005-.234zm.791.645h.563q.371 0 .609.152a.9.9 0 0 1 .354.454q.118.302.118.753a2.3 2.3 0 0 1-.068.592 1.1 1.1 0 0 1-.196.422.8.8 0 0 1-.334.252 1.3 1.3 0 0 1-.483.082h-.563zm3.743 1.763v1.591h-.79V11.85h2.548v.653H7.896v1.117h1.606v.638z"/>
+                                                      </svg>
+                                                </div>
+                                                <div class="ms-2">
+                                                    <h3 class="folders-name">UX Gemastik</h3>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 ms-1">
+                                            <h3 class="last-edit-file">Tue,15 Aug 2023</h3>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <h3 class="last-edit-file">892 MB</h3>
+                                        </div>
+                                        <div class="col-lg-2 ms-2">
+                                            <div class="d-flex align-items-center">
+                                                <img src="/assets/imgs/1.jpg" alt="" class="member-img rounded-pill ">
+                                                <img src="/assets/imgs/2.jpg" alt="" class="member-img rounded-pill ">
+                                                <img src="/assets/imgs/3.jpg" alt="" class="member-img rounded-pill">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2">
+                                           <div class="d-flex align-items-center justify-content-end">
+                                             <button class="btn" @click="fileAction =!fileAction">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
+                                                  </svg>
+                                            </button>
+                                           </div>
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+                                <div class="file-holder my-2 ">
+                                    <div class="row mx-2 py-1 align-items-center ">
+                                        <div class="col-lg-3 ">
+                                            <div class="d-flex align-items-center">
+                                                <div
+                                                    class="card d-flex rounded-3 align-items-center justify-content-center px-2 py-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" style="color: rgb(0, 68, 255);" width="16" height="16" fill="currentColor" class="bi bi-filetype-doc" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zm-7.839 9.166v.522q0 .384-.117.641a.86.86 0 0 1-.322.387.9.9 0 0 1-.469.126.9.9 0 0 1-.471-.126.87.87 0 0 1-.32-.386 1.55 1.55 0 0 1-.117-.642v-.522q0-.386.117-.641a.87.87 0 0 1 .32-.387.87.87 0 0 1 .471-.129q.264 0 .469.13a.86.86 0 0 1 .322.386q.117.255.117.641m.803.519v-.513q0-.565-.205-.972a1.46 1.46 0 0 0-.589-.63q-.381-.22-.917-.22-.533 0-.92.22a1.44 1.44 0 0 0-.589.627q-.204.406-.205.975v.513q0 .563.205.973.205.406.59.627.386.216.92.216.535 0 .916-.216.383-.22.59-.627.204-.41.204-.973M0 11.926v4h1.459q.603 0 .999-.238a1.45 1.45 0 0 0 .595-.689q.196-.45.196-1.084 0-.63-.196-1.075a1.43 1.43 0 0 0-.59-.68q-.395-.234-1.004-.234zm.791.645h.563q.371 0 .609.152a.9.9 0 0 1 .354.454q.118.302.118.753a2.3 2.3 0 0 1-.068.592 1.1 1.1 0 0 1-.196.422.8.8 0 0 1-.334.252 1.3 1.3 0 0 1-.483.082H.79V12.57Zm7.422.483a1.7 1.7 0 0 0-.103.633v.495q0 .369.103.627a.83.83 0 0 0 .298.393.85.85 0 0 0 .478.131.9.9 0 0 0 .401-.088.7.7 0 0 0 .273-.248.8.8 0 0 0 .117-.364h.765v.076a1.27 1.27 0 0 1-.226.674q-.205.29-.55.454a1.8 1.8 0 0 1-.786.164q-.54 0-.914-.216a1.4 1.4 0 0 1-.571-.627q-.194-.408-.194-.976v-.498q0-.568.197-.978.195-.411.571-.633.378-.223.911-.223.328 0 .607.097.28.093.489.272a1.33 1.33 0 0 1 .466.964v.073H9.78a.85.85 0 0 0-.12-.38.7.7 0 0 0-.273-.261.8.8 0 0 0-.398-.097.8.8 0 0 0-.475.138.87.87 0 0 0-.301.398"/>
+                                                      </svg>
+                                                </div>
+                                                <div class="ms-2">
+                                                    <h3 class="folders-name">Tasks Summary</h3>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 ms-1">
+                                            <h3 class="last-edit-file">Mon,12 Mar 2023</h3>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <h3 class="last-edit-file">430 MB</h3>
+                                        </div>
+                                        <div class="col-lg-2 ms-2">
+                                            <div class="d-flex align-items-center">
+                                                <img src="/assets/imgs/3.jpg" alt="" class="member-img rounded-pill ">
+                                                <img src="/assets/imgs/2.jpg" alt="" class="member-img rounded-pill ">
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2">
+                                           <div class="d-flex align-items-center justify-content-end">
+                                             <button class="btn" @click="fileAction =!fileAction">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
+                                                  </svg>
+                                            </button>
+                                           </div>
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+                                <div class="file-holder my-2 ">
+                                    <div class="row mx-2 py-1 align-items-center ">
+                                        <div class="col-lg-3 ">
+                                            <div class="d-flex align-items-center">
+                                                <div
+                                                    class="card d-flex rounded-3 align-items-center justify-content-center px-2 py-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" style="color: orangered;" width="16" height="16" fill="currentColor" class="bi bi-filetype-svg" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2v-1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zM0 14.841a1.13 1.13 0 0 0 .401.823q.194.162.478.252.285.091.665.091.507 0 .858-.158.355-.158.54-.44a1.17 1.17 0 0 0 .187-.656q0-.336-.135-.56a1 1 0 0 0-.375-.357 2 2 0 0 0-.565-.21l-.621-.144a1 1 0 0 1-.405-.176.37.37 0 0 1-.143-.299q0-.234.184-.384.187-.152.513-.152.214 0 .37.068a.6.6 0 0 1 .245.181.56.56 0 0 1 .12.258h.75a1.1 1.1 0 0 0-.199-.566 1.2 1.2 0 0 0-.5-.41 1.8 1.8 0 0 0-.78-.152q-.44 0-.776.15-.337.149-.528.421-.19.273-.19.639 0 .302.123.524t.351.367q.229.143.54.213l.618.144q.31.073.462.193a.39.39 0 0 1 .153.326.5.5 0 0 1-.085.29.56.56 0 0 1-.256.193q-.167.07-.413.07-.176 0-.32-.04a.8.8 0 0 1-.248-.115.58.58 0 0 1-.255-.384zm4.575 1.09h.952l1.327-3.999h-.879l-.887 3.138H5.05l-.897-3.138h-.917zm5.483-3.293q.114.228.14.492h-.776a.8.8 0 0 0-.096-.249.7.7 0 0 0-.17-.19.7.7 0 0 0-.237-.126 1 1 0 0 0-.3-.044q-.427 0-.664.302-.235.3-.235.85v.497q0 .352.097.616a.9.9 0 0 0 .305.413.87.87 0 0 0 .518.146 1 1 0 0 0 .457-.097.67.67 0 0 0 .273-.263q.09-.164.09-.364v-.254h-.823v-.59h1.576v.798q0 .29-.096.55a1.3 1.3 0 0 1-.293.457 1.4 1.4 0 0 1-.495.314q-.296.111-.698.111a2 2 0 0 1-.752-.132 1.45 1.45 0 0 1-.534-.377 1.6 1.6 0 0 1-.319-.58 2.5 2.5 0 0 1-.105-.745v-.507q0-.54.199-.949.202-.406.583-.633.383-.228.926-.228.357 0 .635.1.282.1.48.275.2.176.314.407"/>
+                                                      </svg>
+                                                </div>
+                                                <div class="ms-2">
+                                                    <h3 class="folders-name">Illustration SVG</h3>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 ms-1">
+                                            <h3 class="last-edit-file">Sat,15 Feb 2023</h3>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <h3 class="last-edit-file">122 MB</h3>
+                                        </div>
+                                        <div class="col-lg-2 ms-2">
+                                            <div class="d-flex align-items-center">
+                                                <img src="/assets/imgs/1.jpg" alt="" class="member-img rounded-pill ">
+                                                <img src="/assets/imgs/4.jpg" alt="" class="member-img rounded-pill ">
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2">
+                                           <div class="d-flex align-items-center justify-content-end">
+                                             <button class="btn" @click="fileAction =!fileAction">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
+                                                  </svg>
+                                            </button>
+                                           </div>
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+                                <div class="file-holder my-2 ">
+                                    <div class="row mx-2 py-1 align-items-center ">
+                                        <div class="col-lg-3 ">
+                                            <div class="d-flex align-items-center">
+                                                <div
+                                                    class="card d-flex rounded-3 align-items-center justify-content-center px-2 py-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" style="color: red;" width="16" height="16" fill="currentColor" class="bi bi-filetype-ppt" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zM1.6 11.85H0v3.999h.791v-1.342h.803q.43 0 .732-.173.305-.175.463-.474a1.4 1.4 0 0 0 .161-.677q0-.375-.158-.677a1.2 1.2 0 0 0-.46-.477q-.3-.18-.732-.179m.545 1.333a.8.8 0 0 1-.085.38.57.57 0 0 1-.238.241.8.8 0 0 1-.375.082H.788V12.48h.66q.327 0 .512.181.185.183.185.522m2.817-1.333h-1.6v3.999h.791v-1.342h.803q.43 0 .732-.173.305-.175.463-.474.162-.302.161-.677 0-.375-.158-.677a1.2 1.2 0 0 0-.46-.477q-.3-.18-.732-.179m.545 1.333a.8.8 0 0 1-.085.38.57.57 0 0 1-.238.241.8.8 0 0 1-.375.082H4.15V12.48h.66q.327 0 .512.181.185.183.185.522m2.767-.67v3.336H7.48v-3.337H6.346v-.662h3.065v.662z"/>
+                                                      </svg>
+                                                </div>
+                                                <div class="ms-2">
+                                                    <h3 class="folders-name">Pitch Deck</h3>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 ms-1">
+                                            <h3 class="last-edit-file">Wed,15 Jul 2023</h3>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <h3 class="last-edit-file">192 MB</h3>
+                                        </div>
+                                        <div class="col-lg-2 ms-2">
+                                            <div class="d-flex align-items-center">
+                                                <img src="/assets/imgs/1.jpg" alt="" class="member-img rounded-pill ">
+                                                <img src="/assets/imgs/2.jpg" alt="" class="member-img rounded-pill ">
+                                                <img src="/assets/imgs/4.jpg" alt="" class="member-img rounded-pill ">
+                                                <span class="ms-1">+4
+
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2">
+                                           <div class="d-flex align-items-center justify-content-end">
+                                             <button class="btn" @click="fileAction =!fileAction">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
+                                                  </svg>
+                                            </button>
+                                           </div>
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+                                <div class="file-holder my-2 ">
+                                    <div class="row mx-2 py-1 align-items-center ">
+                                        <div class="col-lg-3 ">
+                                            <div class="d-flex align-items-center">
+                                                <div
+                                                    class="card d-flex rounded-3 align-items-center justify-content-center px-2 py-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" style="color: rgb(209, 49, 49);" width="16" height="16" fill="currentColor" class="bi bi-filetype-pdf" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zM1.6 11.85H0v3.999h.791v-1.342h.803q.43 0 .732-.173.305-.175.463-.474a1.4 1.4 0 0 0 .161-.677q0-.375-.158-.677a1.2 1.2 0 0 0-.46-.477q-.3-.18-.732-.179m.545 1.333a.8.8 0 0 1-.085.38.57.57 0 0 1-.238.241.8.8 0 0 1-.375.082H.788V12.48h.66q.327 0 .512.181.185.183.185.522m1.217-1.333v3.999h1.46q.602 0 .998-.237a1.45 1.45 0 0 0 .595-.689q.196-.45.196-1.084 0-.63-.196-1.075a1.43 1.43 0 0 0-.589-.68q-.396-.234-1.005-.234zm.791.645h.563q.371 0 .609.152a.9.9 0 0 1 .354.454q.118.302.118.753a2.3 2.3 0 0 1-.068.592 1.1 1.1 0 0 1-.196.422.8.8 0 0 1-.334.252 1.3 1.3 0 0 1-.483.082h-.563zm3.743 1.763v1.591h-.79V11.85h2.548v.653H7.896v1.117h1.606v.638z"/>
+                                                      </svg>
+                                                </div>
+                                                <div class="ms-2">
+                                                    <h3 class="folders-name">UI/UX Project Details</h3>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 ms-1">
+                                            <h3 class="last-edit-file">Fri,31 Apr 2023</h3>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <h3 class="last-edit-file">892 MB</h3>
+                                        </div>
+                                        <div class="col-lg-2 ms-2">
+                                            <div class="d-flex align-items-center">
+                                                <img src="/assets/imgs/1.jpg" alt="" class="member-img rounded-pill ">
+                                                <img src="/assets/imgs/2.jpg" alt="" class="member-img rounded-pill ">
+                                                <img src="/assets/imgs/3.jpg" alt="" class="member-img rounded-pill">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2">
+                                           <div class="d-flex align-items-center justify-content-end">
+                                             <button class="btn" @click="fileAction =!fileAction">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
+                                                  </svg>
+                                            </button>
+                                           </div>
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+                                <div class="file-holder my-2 ">
+                                    <div class="row mx-2 py-1 align-items-center ">
+                                        <div class="col-lg-3 ">
+                                            <div class="d-flex align-items-center">
+                                                <div
+                                                    class="card d-flex rounded-3 align-items-center justify-content-center px-2 py-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" style="color: rgb(209, 49, 49);" width="16" height="16" fill="currentColor" class="bi bi-filetype-pdf" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zM1.6 11.85H0v3.999h.791v-1.342h.803q.43 0 .732-.173.305-.175.463-.474a1.4 1.4 0 0 0 .161-.677q0-.375-.158-.677a1.2 1.2 0 0 0-.46-.477q-.3-.18-.732-.179m.545 1.333a.8.8 0 0 1-.085.38.57.57 0 0 1-.238.241.8.8 0 0 1-.375.082H.788V12.48h.66q.327 0 .512.181.185.183.185.522m1.217-1.333v3.999h1.46q.602 0 .998-.237a1.45 1.45 0 0 0 .595-.689q.196-.45.196-1.084 0-.63-.196-1.075a1.43 1.43 0 0 0-.589-.68q-.396-.234-1.005-.234zm.791.645h.563q.371 0 .609.152a.9.9 0 0 1 .354.454q.118.302.118.753a2.3 2.3 0 0 1-.068.592 1.1 1.1 0 0 1-.196.422.8.8 0 0 1-.334.252 1.3 1.3 0 0 1-.483.082h-.563zm3.743 1.763v1.591h-.79V11.85h2.548v.653H7.896v1.117h1.606v.638z"/>
+                                                      </svg>
+                                                </div>
+                                                <div class="ms-2">
+                                                    <h3 class="folders-name">AI Wireframe Design</h3>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2 ms-1">
+                                            <h3 class="last-edit-file">Fri,31 Apr 2023</h3>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <h3 class="last-edit-file">892 MB</h3>
+                                        </div>
+                                        <div class="col-lg-2 ms-2">
+                                            <div class="d-flex align-items-center">
+                                                <img src="/assets/imgs/1.jpg" alt="" class="member-img rounded-pill ">
+                                                <img src="/assets/imgs/2.jpg" alt="" class="member-img rounded-pill ">
+                                                <img src="/assets/imgs/3.jpg" alt="" class="member-img rounded-pill">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-2">
+                                           <div class="d-flex align-items-center justify-content-end">
+                                             <button class="btn" @click="fileAction =!fileAction">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
+                                                  </svg>
+                                            </button>
+                                           </div>
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+                                <!-- mobile view -->
+                               <div class="d-lg-none">
+                                <div class="row mx-1">
+                                    <div class="col-lg-4 file-holder rounded-3  m-2" id="folders-card">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                        <div class="d-flex align-items-center ms-1">
+                                            <div class="d-flex align-items-center">
+                                                <div
+                                                    class="card d-flex rounded-3 align-items-center justify-content-center px-2 py-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" style="color: rgb(209, 49, 49);" width="16" height="16" fill="currentColor" class="bi bi-filetype-pdf" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zM1.6 11.85H0v3.999h.791v-1.342h.803q.43 0 .732-.173.305-.175.463-.474a1.4 1.4 0 0 0 .161-.677q0-.375-.158-.677a1.2 1.2 0 0 0-.46-.477q-.3-.18-.732-.179m.545 1.333a.8.8 0 0 1-.085.38.57.57 0 0 1-.238.241.8.8 0 0 1-.375.082H.788V12.48h.66q.327 0 .512.181.185.183.185.522m1.217-1.333v3.999h1.46q.602 0 .998-.237a1.45 1.45 0 0 0 .595-.689q.196-.45.196-1.084 0-.63-.196-1.075a1.43 1.43 0 0 0-.589-.68q-.396-.234-1.005-.234zm.791.645h.563q.371 0 .609.152a.9.9 0 0 1 .354.454q.118.302.118.753a2.3 2.3 0 0 1-.068.592 1.1 1.1 0 0 1-.196.422.8.8 0 0 1-.334.252 1.3 1.3 0 0 1-.483.082h-.563zm3.743 1.763v1.591h-.79V11.85h2.548v.653H7.896v1.117h1.606v.638z"/>
+                                                      </svg>
+                                                </div>
+                                                <div class="ms-2">
+                                                    <h3 class="folders-name">UX Gemastik</h3>
+                                                    <p class="file-size">892 MB</p>
+
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <button class="btn" @click="fileAction =!fileAction">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                                <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
+                                              </svg>
+                                        </button>
+                                       </div>
+                                        <div class="d-flex align-items-center justify-content-between mt-2">
+                                            <p class="file-size">Tue,15 Aug 2023</p>
+                                            <div class="d-flex align-items-center mb-3">
+                                                <img src="/assets/imgs/1.jpg" alt="" class="member-img rounded-pill ">
+                                                <img src="/assets/imgs/2.jpg" alt="" class="member-img rounded-pill ">
+                                                <img src="/assets/imgs/3.jpg" alt="" class="member-img rounded-pill">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                               </div>
+
+                                <div class="file-action card py-3 float-end me-3" x-show="fileAction" @click.outside="fileAction =!fileAction">
+                                   <span class="action-options ps-3 py-2 mt-1">
+                                    <span class="me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-text" viewBox="0 0 16 16">
+                                            <path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5"/>
+                                            <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"/>
+                                          </svg>
+                                    </span>
+                                    Open
+                                   </span>
+                                   <span class="action-options ps-3 py-2 mt-1">
+                                    <span class="me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-arrow-down" viewBox="0 0 16 16">
+                                            <path d="M8.5 6.5a.5.5 0 0 0-1 0v3.793L6.354 9.146a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 10.293z"/>
+                                            <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
+                                          </svg>
+                                    </span>
+                                    Download
+                                   </span>
+                                   <span class="action-options ps-3 py-2 mt-1">
+                                    <span class="me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
+                                            <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5m-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3"/>
+                                          </svg>
+                                    </span>
+                                    Share
+                                   </span>
+                                   <span class="action-options ps-3 py-2 mt-1">
+                                    <span class="me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+                                            <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+                                            <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
+                                          </svg>
+                                    </span>
+                                    Copy Link
+                                   </span>
+                                   <span class="action-options ps-3 py-2 mt-1">
+                                    <span class="me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                                            <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
+                                          </svg>
+                                    </span>
+                                    Move Trash
+                                   </span>
+                                  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="card storage-holder p-3">
+                                <div class="inner-storage-holder card border-0">
+                                    <div class="d-flex align-items-center justify-content-between p-3">
+                                        <p class="" style="font-weight: 500;">Your storage</p>
+                                        <p class="storage-left">25%  left</p>
+                                    </div>
+                                   <div class="px-3">
+                                    <span class="storage-info">75.2 GB of 100 GB are used</span>
+                                    <div class="progress mt-2" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 7px; border-color: #000;">
+                                        <div class="progress-bar" style="width: 75%; border-color: #000;"></div>
+                                      </div>
+                                      <div class="rounded mt-3 icon-holder d-flex  justify-content-between p-3 align-items-center">
+                                        <div class="">
+                                          <span class="storage-upgrade">Upgrade Storage</span> <br>
+                                          <span class="storage-warning">Your Storage is almost full. <br>let's upgrade your plan</span>
+                                        </div>
+                                        <button class="upgrade-btn rounded-pill py-2 px-3">Upgrade Plan</button>
+                                      </div>
+                                   </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        </main>
+
+        </div>
+        </div>
+    </section>
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Alpine JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
+    <script src="/assets/app.js"></script>
 </body>
+
 </html>
