@@ -1,0 +1,42 @@
+[
+    {
+        "name":"UX Gemastik", "lastEdit":"Tue, 15 Aug 2023","fileSize":"892MB", "icon":"bi bi-filetype-pdf",
+        "members":{
+            "img1": "/assets/imgs/1.jpg",
+            "img2": "/assets/imgs/2.jpg",
+            "img3": "/assets/imgs/3.jpg"
+        }
+    },
+    {
+        "name":"Task Summary", "lastEdit":"Sun, 13 Aug 2023","fileSize":"430MB", "icon":"bi bi-filetype-docx",
+        "members":{
+            "img1": "/assets/imgs/4.jpg",
+            "img2": "/assets/imgs/2.jpg",
+            "img3": ""
+        }
+    },
+    {
+        "name":"Illuatration", "lastEdit":"Mon, 07 Aug 2023","fileSize":"122MB", "icon":"bi bi-filetype-svg",
+        "members":{
+            "img1": "/assets/imgs/3.jpg",
+            "img2": "/assets/imgs/2.jpg",
+            "img3": ""
+        }
+    },
+    {
+        "name":"Client Invoice", "lastEdit":"Wed, 24 Jul 2023","fileSize":"999MB", "icon":"bi bi-filetype-pdf",
+        "members":{
+            "img1": "/assets/imgs/3.jpg",
+            "img2": "/assets/imgs/2.jpg",
+            "img3": "/assets/imgs/1.jpg"
+        }
+    },
+    {
+        "name":"Pitch Deck", "lastEdit":"Sat, 22 Jun 2023","fileSize":"192MB", "icon":"bi bi-filetype-pdf",
+        "members":{
+            "img1": "/assets/imgs/4.jpg",
+            "img2": "/assets/imgs/1.jpg",
+            "img3": ""
+        }
+    }
+]
