@@ -65,3 +65,14 @@ dark-theme-text-color: #878989 */
 .active{
     color: #5B9A8B;
 }
+.bottom-sidenav{
+    margin-top: 15rem;
+}
+.upload-wrapper{
+    color: #b6b6b6;
+    border: #b6b6b6 1px dashed;
+    width: 200px;
+    text-align: center;
+    background-size: cover;
+    font-size: 18px;
+}
