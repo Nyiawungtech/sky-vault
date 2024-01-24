@@ -18,9 +18,13 @@ dark-theme-text-color: #878989 */
     border-bottom: 1px solid grey;
     width: 100%;
 }
+.search-wrapper{
+    width: 200px;
+}
 .search-box{
     border: none;
     outline: none;
+    width: 150px;
    
 }
 .btn-notify{
