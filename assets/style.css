@@ -7,13 +7,26 @@ light-tehem:#fff
 dark-theme-text-color: #878989 */
 
 /* nav */
+*{
+    font-family: 'Inter';
+}
 .top-nav{
     border-bottom: 1px solid grey;
+    width: 100%;
+}
+.bottom-nav{
+    border-bottom: 1px solid grey;
+    width: 100%;
 }
 .search-box{
     border: none;
     outline: none;
    
+}
+.btn-notify{
+    border: none;
+    background-color: #5B9A8B;
+    color: #fff;
 }
 #light-theme{
     display: none;
@@ -22,4 +35,29 @@ dark-theme-text-color: #878989 */
     width: 40px;
     height: 40px;
     object-fit: cover;
+}
+.create-btn{
+    border: none;
+    background-color: #5B9A8B;
+    color: #fff;
+}
+.logo{
+    width: 100px;
+    
+}
+.logo-text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: -10px;
+    
+}
+.sidenav-link{
+    font-size: 18px;
+    text-decoration: none;
+    color: #b6b6b6;
+    font-weight: 500;
+}
+
+.active{
+    color: #5B9A8B;
 }

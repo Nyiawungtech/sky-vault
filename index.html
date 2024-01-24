@@ -22,13 +22,42 @@
 
    <!-- header -->
    <!-- mobile-nav -->
-   <nav class="navbar bg-white w-100" x-data="{}">
-    <div class="d-flex align-items-center justify-content-between top-nav px-2 pb-2">
-       <button class="nav-btn btn btn-sm me-1">
+   <nav class="navbar bg-white overflow-hidden" x-data="{}" >
+    <div class="d-flex align-items-center justify-content-between top-nav px-2 pb-2" style="overflow: hidden;">
+       <button class="nav-btn btn btn-sm me-1" data-bs-toggle="offcanvas" data-bs-target="#sidenav" aria-controls="staticBackdrop">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
           </svg>
        </button>
+       <!-- mobile-sidenave -->
+       <div class="offcanvas offcanvas-start show" tabindex="-1" id="sidenav" aria-labelledby="offcanvasLabel">
+        <div class="d-flex align-items-start justify-content-between p-3">
+           <div class="">
+            <img src="/assets//imgs/logo.png" alt="" class="logo">
+           <h1 class="logo-text">Sky Vault</h1>
+           </div>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="">
+            <div class="d-flex  flex-column">
+              <a href="#" class="sidenav-link active my-2">
+                <span class="">
+                  <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" viewBox="0 0 24 24" width="20" height="20"><path d="M12.97 2.59a1.5 1.5 0 0 0-1.94 0l-7.5 6.363A1.5 1.5 0 0 0 3 10.097V19.5A1.5 1.5 0 0 0 4.5 21h4.75a.75.75 0 0 0 .75-.75V14h4v6.25c0 .414.336.75.75.75h4.75a1.5 1.5 0 0 0 1.5-1.5v-9.403a1.5 1.5 0 0 0-.53-1.144l-7.5-6.363Z"></path></svg>
+                </span>
+                <span class="sidenav-link-text">Dashboard</span>
+              </a>
+              <a href="#" class="sidenav-link  my-2">
+                <span class="">
+                  <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" viewBox="0 0 24 24" width="24" height="24"><path d="M12.97 2.59a1.5 1.5 0 0 0-1.94 0l-7.5 6.363A1.5 1.5 0 0 0 3 10.097V19.5A1.5 1.5 0 0 0 4.5 21h4.75a.75.75 0 0 0 .75-.75V14h4v6.25c0 .414.336.75.75.75h4.75a1.5 1.5 0 0 0 1.5-1.5v-9.403a1.5 1.5 0 0 0-.53-1.144l-7.5-6.363Z"></path></svg>
+                </span>
+                <span class="sidenav-link-text">Shared with Me</span>
+              </a>
+            </div>
+            <div class="bg-danger">11111111</div>
+          </div>
+        </div>
+      </div>
        <!-- searchbox -->
        <div class="d-flex align-items-center form-control rounded-pill">
         <span class="me-2">
@@ -52,12 +81,6 @@
               </svg>
         </button>
        </div>
-       <!-- notification bell -->
-       <button type="button" class="btn btn-sm border border-secondary rounded-pill p-2">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
-            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"/>
-          </svg>
-      </button>
       <!-- user-profile -->
       <div class="user-profile ms-2">
         <img src="/assets/imgs/3.jpg" alt="" class="user-img rounded-pill" data-bs-toggle="offcanvas" data-bs-target="#profilebackdrop" aria-controls="staticBackdrop">
@@ -70,10 +93,17 @@
              </div>
               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <div class="offcanvas-body">
+            <div class="offcanvas-body h-50">
               <div>
+                <button type="button" class="btn btn-notify position-relative">
+                  Notifications
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    12+
+                    <span class="visually-hidden">unread messages</span>
+                  </span>
+                </button>
                 <hr>
-                <div class="d-flex align-items-center">
+                <div class="d-flex align-items-center my-3">
                     <span class="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
                             <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
@@ -81,7 +111,7 @@
                     </span>
                     <span class="ms-2">Your Profile</span>
                 </div>
-                <div class="d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center justify-content-between my-3">
                     <div class="d-flex align-items-center">
                         <span class="">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-left-right" viewBox="0 0 16 16">
@@ -97,7 +127,7 @@
                     </span>
                 </div>
                 <hr>
-                <div class="d-flex align-items-center">
+                <div class="d-flex align-items-center my-3">
                     <span class="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-folder-fill" viewBox="0 0 16 16">
                             <path d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3m-8.322.12q.322-.119.684-.12h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981z"/>
@@ -105,7 +135,7 @@
                     </span>
                     <span class="ms-2">Your Files</span>
                 </div>
-                <div class="d-flex align-items-center">
+                <div class="d-flex align-items-center my-3">
                     <span class="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z"/>
@@ -118,6 +148,17 @@
             </div>
           </div>
       </div>
+    </div>
+    <div class="bottom-nav d-flex align-items-center justify-content-between px-2 mt-2 py-2">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#" class="text-dark" style="text-decoration: none;">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+            </ol>
+          </nav>
+          <button class="create-btn py-2 px-3 rounded-pill">
+             + Create
+          </button>
     </div>
    </nav>
 
