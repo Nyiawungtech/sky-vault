@@ -80,6 +80,9 @@ main{
     background-color: #F9F9F9;
     height: fit-content;
 }
+.folders-text{
+    font-size: 20px;
+}
 .folder-card{
     background-color: #fff;
   border: none;
@@ -120,4 +123,41 @@ main{
 .open-folder-edit{
     margin-top: -1rem;
     color: #a5a4a4;
+}
+.member-img{
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+    margin-left: -1rem;
+    object-fit: cover;
+}
+.action-card{
+    width: 200px;
+    height: fit-content;
+    margin-top: -4rem;
+    margin-left: 1rem;
+    margin-bottom: -9rem;
+    z-index: 10;
+}
+.action-option{
+    background-color: inherit;
+    cursor: pointer;
+    color: inherit;
+}
+.action-option:hover{
+    background-color: #5B9A8B;
+    color: #fff;
+    
+}
+.bi-filetype-pdf{
+    color: #E4252D;
+}
+.bi-filetype-docx{
+    color: #035ECF;
+}
+.bi-filetype-svg{
+    color: #FD6C03;
+}
+.bi-filetype-ppt{
+    color: #E4252D;
 }

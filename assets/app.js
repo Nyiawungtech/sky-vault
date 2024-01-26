@@ -15,3 +15,22 @@ document.addEventListener("alpine:init", ()=>{
         }
     }))
 })
+
+
+
+function createDataRetriever() {
+
+    return {
+       
+        files: [],
+        getData() {
+            
+            fetch('/data.json')            
+                .then((response) => response.json())
+                .then((data) => { 
+                    this.files = data;
+                });
+                console.log(this.files)
+        }  
+    }
+  }

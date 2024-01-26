@@ -32,7 +32,7 @@
         }
     },
     {
-        "name":"Pitch Deck", "lastEdit":"Sat, 22 Jun 2023","fileSize":"192MB", "icon":"bi bi-filetype-pdf",
+        "name":"Pitch Deck", "lastEdit":"Sat, 22 Jun 2023","fileSize":"192MB", "icon":"bi bi-filetype-ppt",
         "members":{
             "img1": "/assets/imgs/4.jpg",
             "img2": "/assets/imgs/1.jpg",
