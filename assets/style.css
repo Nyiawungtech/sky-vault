@@ -161,3 +161,45 @@ main{
 .bi-filetype-ppt{
     color: #E4252D;
 }
+
+.storage-info-wrapper{
+    background-color: #fff;
+}
+.storage-info{
+    background-color: #F5F9FD;
+}
+.storage-left{
+    color: #5B9A8B;
+    font-weight: bold;
+}
+.used-space{
+    margin-bottom: -1px;
+}
+.storage-upgrade{
+    background-color: #E6E6E6;
+}
+.storage-prompt{
+    color: #5B9A8B;
+    font-size: 15px;
+}
+.storage-btn{
+    background-color: #5B9A8B;
+    color: #fff;
+    font-size: 15px;
+    border: none;
+}
+.storage-total{
+    border:  1px solid rgb(211, 211, 211);
+    height: fit-content;
+}
+.primary-text{
+    color: #5B9A8B;
+}
+.storage-total-text{
+    font-weight: 500;
+}
+.storage-total-storage{
+    color: rgb(150, 150, 150);
+    margin-top: -16px;
+    font-size: 15px;
+}

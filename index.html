@@ -339,8 +339,8 @@
         </div>
       </div>
       <div class="container-fluid" x-data="{fileAction:false}">
-        <div class="row mt-4">
-          <div class="col-lg-8">
+        <div class="row mt-4 mx-0">
+          <div class="col-lg-7">
             <h2 class="folders-text">Files</h2>
             
               <div class="row" x-data="createDataRetriever()" x-init="getData()">
@@ -427,8 +427,79 @@
               </div>
            
           </div>
-          <div class="col lg-2">
-  
+          <div class="col-lg-5 mt-3 p-0">
+            <div class="storage-info-wrapper p-2">
+              <div class="storage-info p-3 rounded">
+                <div class="d-flex align-items-center justify-content-between">
+                  <p class="">Your Storage</p>
+                  <p class="storage-left">25% Left</p>
+                </div>
+                <p class="used-space">75.2 of 100 GB Used</p>
+                <div class="progress mt-2" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75.2%; background-color: #5B9A8B;"></div>
+                </div>
+                <div class="storage-upgrade p-3 mt-3 rounded">
+                  <p class="upgrade-text fw-bold">Upgrade Storage</p>
+                  <p class="storage-prompt">Your Storage is almost full. Let's upgrade your plan</p>   
+                 <div class="d-grid">
+                   <button class="storage-btn py-2  rounded-pill">
+                     Upgrade Plan
+                  </button>
+                 </div>
+              </div>
+              <div class=" mt-3">
+                <p class="fw-bold">Total Files</p>
+                <div class="row row=cols-2">
+                  <div class="col-lg-6 storage-total rounded p-2 m-1">
+                    <div class="d-flex align-items-start">
+                      <div class="folder-icon-wrapper rounded-3  py-2 px-3">
+                        <i class="bi bi-folder-fill primary-text fs-3"></i>
+                      </div>
+                      <div class="ms-2">
+                        <p class="storage-total-text">Documents</p>
+                        <p class="storage-total-storage">2.5GB</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 storage-total rounded p-2 m-1">
+                    <div class="d-flex align-items-start">
+                      <div class="folder-icon-wrapper rounded-3  py-2 px-3">
+                        <i class="bi bi-card-image  primary-text fs-3"></i>
+                      </div>
+                      <div class="ms-2">
+                        <p class="storage-total-text">Medias</p>
+                        <p class="storage-total-storage ">4.2GB</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 storage-total rounded p-2 m-1">
+                    <div class="d-flex align-items-start">
+                      <div class="folder-icon-wrapper rounded-3  py-2 px-3">
+                        <i class="bi bi-music-note primary-text fs-3"></i>
+                      </div>
+                      <div class="ms-2">
+                        <p class="storage-total-text">Musics</p>
+                        <p class="storage-total-storage">1.5GB</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 storage-total rounded p-2 m-1">
+                    <div class="d-flex align-items-start">
+                      <div class="folder-icon-wrapper rounded-3  py-2 px-3">
+                        <i class="bi bi-collection-fill primary-text fs-3"></i>
+                      </div>
+                      <div class="ms-2">
+                        <p class="storage-total-text">Others</p>
+                        <p class="storage-total-storage">5.5GB</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+             
+              
+            </div>
           </div>
         </div>
       </div>
