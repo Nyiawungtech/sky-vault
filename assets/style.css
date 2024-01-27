@@ -9,15 +9,24 @@ dark-theme-text-color: #878989 */
 /* nav */
 *{
     font-family: 'Inter', sans-serif;
+    
+   
+}
+.logo-wrapper{
+    background-color: #fff;
+}
+.main-section{
+    border-left: 1px solid rgb(211, 211, 211);
 }
 .top-nav{
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid rgb(211, 211, 211);
     width: 100%;
 }
 .bottom-nav{
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid  rgb(211, 211, 211);
     width: 100%;
 }
+
 .search-wrapper{
     width: 200px;
 }
@@ -26,6 +35,9 @@ dark-theme-text-color: #878989 */
     outline: none;
     width: 150px;
    
+}
+.notification-bell{
+    border: 1px solid  rgb(150, 150, 150);;
 }
 .btn-notify{
     border: none;
@@ -46,14 +58,19 @@ dark-theme-text-color: #878989 */
     color: #fff;
 }
 .logo{
-    width: 100px;
+    width: 60px;
     
 }
 .logo-text{
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 600;
-    margin-top: -10px;
     
+    
+}
+.slogan{
+    font-size: 13px;
+    margin-top: -9px;
+    color: rgb(150, 150, 150);
 }
 .sidenav-link{
     font-size: 18px;
@@ -202,4 +219,52 @@ main{
     color: rgb(150, 150, 150);
     margin-top: -16px;
     font-size: 15px;
+}
+.filter-text{
+    color: rgb(170, 170, 170);
+}
+.file-card{
+  background-color: #fff;
+  border: 1px solid rgb(211, 211, 211);
+  cursor: pointer;
+}
+.file-card:hover{
+  background-color: #fff;
+  border: none;
+  box-shadow: 0px 10px 20px  rgba(10, 10, 10, 0.041);
+}
+
+/* RESPONSIVE */
+/* Tablets */
+@media screen and (min-width:768px) {
+    .search-wrapper{
+        width: 550px;
+    }
+    .search-box{
+        width: 550px;
+    }
+}
+/* Tablets */
+@media screen and (min-width:992px) {
+    .search-wrapper{
+        width: 550px;
+    }
+    .search-box{
+        width: 550px;
+    }
+    .dashboard-text{
+        font-size: 22px;
+    }
+    .folder-name{
+        font-size: 18px;
+        
+    }
+    .open-folder-name{
+        font-size: 18px;
+    }
+    .open-folder-user-img{
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+    }
 }

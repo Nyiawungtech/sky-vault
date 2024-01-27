@@ -2,113 +2,124 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> sky-vault | Dashboard</title>
-    <link rel="shortcut icon" href="/assets/imgs/logo.png" type="image/x-icon">
-    <!-- bootstrap css -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
-    <!-- stylesheet -->
-    <link rel="stylesheet" href="/assets/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> sky-vault | Dashboard</title>
+  <link rel="shortcut icon" href="/assets/imgs/logo.png" type="image/x-icon">
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="/assets/style.css">
 
 
 </head>
 
 <body>
-
-   <!-- header -->
-   <!-- mobile-nav -->
-   <nav class="navbar bg-white overflow-hidden sticky-top" >
-    <div class="d-flex align-items-center justify-content-between top-nav px-2 pb-2" style="overflow: hidden;">
-       <button class="nav-btn btn btn-sm me-1" data-bs-toggle="offcanvas" data-bs-target="#sidenav" aria-controls="staticBackdrop">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-          </svg>
-       </button>
-       <!-- mobile-sidenave -->
-       <div class="offcanvas offcanvas-start hide" tabindex="-1" id="sidenav" aria-labelledby="offcanvasLabel">
-        <div class="d-flex align-items-start justify-content-between p-3">
-           <div class="">
-            <img src="/assets//imgs/logo.png" alt="" class="logo">
-           <h1 class="logo-text">Sky Vault</h1>
-           </div>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  <div class="row mx-0">
+    <div class="col-lg-2 d-none d-lg-block">
+      <div class="px-3 side-nav">
+        <div class="d-flex align-items-start justify-content-between py-3 sticky-top logo-wrapper" id="logo-wrapper">
+          <div class="d-flex align-items-start">
+            <img src="/assets/imgs/logo.png" alt="" class="logo">
+            <div class="ms-1">
+              <h1 class="logo-text">Sky Vault</h1>
+              <p class="slogan">Lovely File Storage</p>
+            </div>
+          </div>
         </div>
         <div class="offcanvas-body">
           <div class="">
             <div class="d-flex  flex-column">
               <a href="#" class="sidenav-link active my-2 d-flex align-items-center">
-               
-                  <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" viewBox="0 0 24 24" width="20" height="20"><path d="M12.97 2.59a1.5 1.5 0 0 0-1.94 0l-7.5 6.363A1.5 1.5 0 0 0 3 10.097V19.5A1.5 1.5 0 0 0 4.5 21h4.75a.75.75 0 0 0 .75-.75V14h4v6.25c0 .414.336.75.75.75h4.75a1.5 1.5 0 0 0 1.5-1.5v-9.403a1.5 1.5 0 0 0-.53-1.144l-7.5-6.363Z"></path></svg>
-               
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="20" height="20">
+                  <path
+                    d="M12.97 2.59a1.5 1.5 0 0 0-1.94 0l-7.5 6.363A1.5 1.5 0 0 0 3 10.097V19.5A1.5 1.5 0 0 0 4.5 21h4.75a.75.75 0 0 0 .75-.75V14h4v6.25c0 .414.336.75.75.75h4.75a1.5 1.5 0 0 0 1.5-1.5v-9.403a1.5 1.5 0 0 0-.53-1.144l-7.5-6.363Z">
+                  </path>
+                </svg>
+
                 <span class="sidenav-link-text ms-2">Dashboard</span>
               </a>
               <a href="#" class="sidenav-link  my-2 d-flex align-items-center">
-                
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
-                    <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
-                  </svg>
-                
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                  class="bi bi-people-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
+                </svg>
+
                 <span class="sidenav-link-text ms-2">Shared with Me</span>
               </a>
               <a href="#" class="sidenav-link  my-2 d-flex align-items-center">
-               
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                  </svg>
-                
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                  class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                </svg>
+
                 <span class="sidenav-link-text ms-2">Favourite</span>
               </a>
               <a href="#" class="sidenav-link  my-2 d-flex align-items-center">
-               
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                fill="currentColor" class="bi bi-collection-fill" viewBox="0 0 16 16">
-                <path
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                  class="bi bi-collection-fill" viewBox="0 0 16 16">
+                  <path
                     d="M0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zM2 3a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11A.5.5 0 0 0 2 3m2-2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7A.5.5 0 0 0 4 1" />
-            </svg>
-                
+                </svg>
+
                 <span class="sidenav-link-text ms-2">Recent</span>
               </a>
               <a href="#" class="sidenav-link  my-2 d-flex align-items-center">
-               
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
-                  <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5"/>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                  class="bi bi-trash3-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" />
                 </svg>
-                
+
                 <span class="sidenav-link-text ms-2">Deleted Files</span>
               </a>
             </div>
             <div class="bottom-sidenav">
               <div class="d-flex align-items-center justify-content-center mb-5">
                 <div class="upload-wrapper py-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-cloud-arrow-up-fill" viewBox="0 0 16 16">
-                    <path d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2m2.354 5.146a.5.5 0 0 1-.708.708L8.5 6.707V10.5a.5.5 0 0 1-1 0V6.707L6.354 7.854a.5.5 0 1 1-.708-.708l2-2a.5.5 0 0 1 .708 0z"/>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                    class="bi bi-cloud-arrow-up-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2m2.354 5.146a.5.5 0 0 1-.708.708L8.5 6.707V10.5a.5.5 0 0 1-1 0V6.707L6.354 7.854a.5.5 0 1 1-.708-.708l2-2a.5.5 0 0 1 .708 0z" />
                   </svg>
-                  <p class="upload-text" >Drag and drop <br> files or <span class="" style="color: #5B9A8B; text-decoration: underline;">Browse</span></p>
+                  <p class="upload-text">Drag and drop <br> files or <span class=""
+                      style="color: #5B9A8B; text-decoration: underline;">Browse</span></p>
                 </div>
               </div>
               <hr>
               <div class="d-flex flex-column">
                 <a href="#" class="sidenav-link  my-2 d-flex align-items-center">
-               
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
-                    <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-gear-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
                   </svg>
-                  
+
                   <span class="sidenav-link-text ms-2">Settings</span>
                 </a>
                 <a href="#" class="sidenav-link  my-2 d-flex align-items-center">
-               
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z"/>
-                    <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
+
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z" />
+                    <path fill-rule="evenodd"
+                      d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z" />
                   </svg>
-                  
+
                   <span class="sidenav-link-text ms-2">Sign Out</span>
                 </a>
               </div>
@@ -116,236 +127,460 @@
           </div>
         </div>
       </div>
-       <!-- searchbox -->
-       <div class="d-flex align-items-center form-control rounded-pill search-wrapper">
-        <span class="me-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-              </svg>
-        </span>
-        <input type="text" class="search-box" placeholder="search your files">
-       </div>
-       <!-- theme-switcher -->
-       <div class="theme-switcher">
-        <button class="btn btn-sm rounded-pill ms-1" id="dark-theme" onclick="darkModeSwitcher()">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-moon-stars-fill" viewBox="0 0 16 16">
-                <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
-                <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"/>
-              </svg>
-        </button>
-        <button class="btn btn-sm rounded-pill ms-2" id="light-theme" onclick="lightModeSwitcher()">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-brightness-low-fill" viewBox="0 0 16 16">
-                <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0M8.5 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 11a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m5-5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m-11 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m9.743-4.036a.5.5 0 1 1-.707-.707.5.5 0 0 1 .707.707m-7.779 7.779a.5.5 0 1 1-.707-.707.5.5 0 0 1 .707.707m7.072 0a.5.5 0 1 1 .707-.707.5.5 0 0 1-.707.707M3.757 4.464a.5.5 0 1 1 .707-.707.5.5 0 0 1-.707.707"/>
-              </svg>
-        </button>
-       </div>
-      <!-- user-profile -->
-      <div class="user-profile ms-2">
-        <img src="/assets/imgs/3.jpg" alt="" class="user-img rounded-pill" data-bs-toggle="offcanvas" data-bs-target="#profilebackdrop" aria-controls="staticBackdrop">
-        
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="profilebackdrop" aria-labelledby="staticBackdropLabel">
-            <div class="offcanvas-header">
-             <div class="d-flex align-items-center">
-                <img src="/assets/imgs/3.jpg" alt="" class="user-img rounded-pill">
-                <span class="user-name ms-2">Philip Omega</span>
-             </div>
+    </div>
+    <div class="col-lg-10 main-section px-0">
+      <!-- header -->
+      <!-- mobile-nav -->
+      <nav class="navbar bg-white overflow-hidden sticky-top">
+        <div class="d-flex align-items-center justify-content-between top-nav px-2 pb-2" style="overflow: hidden;">
+          <button class="nav-btn btn btn-sm me-1 d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#sidenav"
+            aria-controls="staticBackdrop">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+            </svg>
+          </button>
+          <!-- mobile-sidenave -->
+          <div class="offcanvas offcanvas-start hide" tabindex="-1" id="sidenav" aria-labelledby="offcanvasLabel">
+            <div class="d-flex align-items-start justify-content-between p-3">
+              <div class="">
+                <img src="/assets//imgs/logo.png" alt="" class="logo">
+                <h1 class="logo-text">Sky Vault</h1>
+              </div>
               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <div class="offcanvas-body h-50">
-              <div>
-                <button type="button" class="btn btn-notify position-relative">
-                  Notifications
-                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                    12+
-                    <span class="visually-hidden">unread messages</span>
-                  </span>
-                </button>
-                <hr>
-                <div class="d-flex align-items-center my-3">
-                    <span class="">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
-                          </svg>
-                    </span>
-                    <span class="ms-2">Your Profile</span>
+            <div class="offcanvas-body">
+              <div class="">
+                <div class="d-flex  flex-column">
+                  <a href="#" class="sidenav-link active my-2 d-flex align-items-center">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="20"
+                      height="20">
+                      <path
+                        d="M12.97 2.59a1.5 1.5 0 0 0-1.94 0l-7.5 6.363A1.5 1.5 0 0 0 3 10.097V19.5A1.5 1.5 0 0 0 4.5 21h4.75a.75.75 0 0 0 .75-.75V14h4v6.25c0 .414.336.75.75.75h4.75a1.5 1.5 0 0 0 1.5-1.5v-9.403a1.5 1.5 0 0 0-.53-1.144l-7.5-6.363Z">
+                      </path>
+                    </svg>
+
+                    <span class="sidenav-link-text ms-2">Dashboard</span>
+                  </a>
+                  <a href="#" class="sidenav-link  my-2 d-flex align-items-center">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                      class="bi bi-people-fill" viewBox="0 0 16 16">
+                      <path
+                        d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
+                    </svg>
+
+                    <span class="sidenav-link-text ms-2">Shared with Me</span>
+                  </a>
+                  <a href="#" class="sidenav-link  my-2 d-flex align-items-center">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                      class="bi bi-star-fill" viewBox="0 0 16 16">
+                      <path
+                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                    </svg>
+
+                    <span class="sidenav-link-text ms-2">Favourite</span>
+                  </a>
+                  <a href="#" class="sidenav-link  my-2 d-flex align-items-center">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                      class="bi bi-collection-fill" viewBox="0 0 16 16">
+                      <path
+                        d="M0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zM2 3a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11A.5.5 0 0 0 2 3m2-2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7A.5.5 0 0 0 4 1" />
+                    </svg>
+
+                    <span class="sidenav-link-text ms-2">Recent</span>
+                  </a>
+                  <a href="#" class="sidenav-link  my-2 d-flex align-items-center">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                      class="bi bi-trash3-fill" viewBox="0 0 16 16">
+                      <path
+                        d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5" />
+                    </svg>
+
+                    <span class="sidenav-link-text ms-2">Deleted Files</span>
+                  </a>
                 </div>
-                <div class="d-flex align-items-center justify-content-between my-3">
-                    <div class="d-flex align-items-center">
+                <div class="bottom-sidenav">
+                  <div class="d-flex align-items-center justify-content-center mb-5">
+                    <div class="upload-wrapper py-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                        class="bi bi-cloud-arrow-up-fill" viewBox="0 0 16 16">
+                        <path
+                          d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2m2.354 5.146a.5.5 0 0 1-.708.708L8.5 6.707V10.5a.5.5 0 0 1-1 0V6.707L6.354 7.854a.5.5 0 1 1-.708-.708l2-2a.5.5 0 0 1 .708 0z" />
+                      </svg>
+                      <p class="upload-text">Drag and drop <br> files or <span class=""
+                          style="color: #5B9A8B; text-decoration: underline;">Browse</span></p>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="d-flex flex-column">
+                    <a href="#" class="sidenav-link  my-2 d-flex align-items-center">
+
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-gear-fill" viewBox="0 0 16 16">
+                        <path
+                          d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
+                      </svg>
+
+                      <span class="sidenav-link-text ms-2">Settings</span>
+                    </a>
+                    <a href="#" class="sidenav-link  my-2 d-flex align-items-center">
+
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z" />
+                        <path fill-rule="evenodd"
+                          d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z" />
+                      </svg>
+
+                      <span class="sidenav-link-text ms-2">Sign Out</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- searchbox -->
+          <div class="d-flex align-items-center form-control rounded-pill search-wrapper">
+            <span class="me-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+                viewBox="0 0 16 16">
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+              </svg>
+            </span>
+            <input type="text" class="search-box" placeholder="search your files">
+          </div>
+          <div class="d-flex align-items-center">
+            <!-- theme-switcher -->
+            <div class="theme-switcher mx-2">
+              <button class="btn btn-sm rounded-pill ms-2" id="dark-theme" onclick="darkModeSwitcher()">
+                <div class="d-flex align-items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-moon-stars-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278" />
+                    <path
+                      d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z" />
+                  </svg>
+                  <span class="ms-2 d-none d-lg-block">Dark Mode</span>
+                </div>
+              </button>
+              <button class="btn btn-sm rounded-pill ms-2" id="light-theme" onclick="lightModeSwitcher()">
+                <div class="d-flex align-items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-brightness-low-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0M8.5 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 11a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m5-5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m-11 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m9.743-4.036a.5.5 0 1 1-.707-.707.5.5 0 0 1 .707.707m-7.779 7.779a.5.5 0 1 1-.707-.707.5.5 0 0 1 .707.707m7.072 0a.5.5 0 1 1 .707-.707.5.5 0 0 1-.707.707M3.757 4.464a.5.5 0 1 1 .707-.707.5.5 0 0 1-.707.707" />
+                  </svg>
+                  <span class="ms-2 d-none d-lg-block">Light Mode</span>
+                </div>
+              </button>
+            </div>
+            <button class="mx-2  btn notification-bell rounded-pill d-none d-lg-block">
+              <i class="bi bi-bell-fill"></i>
+            </button>
+            <!-- user-profile -->
+            <div class="user-profile mx-3" data-bs-toggle="offcanvas" data-bs-target="#profilebackdrop"
+              aria-controls="staticBackdrop">
+              <div class="d-flex align-items-center">
+                <img src="/assets/imgs/3.jpg" alt="" class="user-img rounded-pill">
+                <span class="ms-2 d-none d-lg-block">Philip Omega</span>
+                <span class="ms-1 d-none d-lg-block"><i class="bi bi-chevron-down"></i></span>
+              </div>
+
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="profilebackdrop"
+                aria-labelledby="staticBackdropLabel">
+                <div class="offcanvas-header">
+                  <div class="d-flex align-items-center">
+                    <img src="/assets/imgs/3.jpg" alt="" class="user-img rounded-pill">
+                    <span class="user-name ms-2">Philip Omega</span>
+
+                  </div>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body h-50">
+                  <div>
+                    <button type="button" class="btn btn-notify position-relative">
+                      Notifications
+                      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        12+
+                        <span class="visually-hidden">unread messages</span>
+                      </span>
+                    </button>
+                    <hr>
+                    <div class="d-flex align-items-center my-3">
+                      <span class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                          class="bi bi-person-fill" viewBox="0 0 16 16">
+                          <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                        </svg>
+                      </span>
+                      <span class="ms-2">Your Profile</span>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between my-3">
+                      <div class="d-flex align-items-center">
                         <span class="">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-left-right" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5"/>
-                              </svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-arrow-left-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                              d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5" />
+                          </svg>
                         </span>
                         <span class="ms-2">Switch Account</span>
+                      </div>
+                      <span class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                          class="bi bi-chevron-down" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd"
+                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                        </svg>
+                      </span>
                     </div>
-                    <span class="">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
-                          </svg>
-                    </span>
-                </div>
-                <hr>
-                <div class="d-flex align-items-center my-3">
-                    <span class="">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-folder-fill" viewBox="0 0 16 16">
-                            <path d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3m-8.322.12q.322-.119.684-.12h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981z"/>
-                          </svg>
-                    </span>
-                    <span class="ms-2">Your Files</span>
-                </div>
-                <div class="d-flex align-items-center my-3">
-                    <span class="">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z"/>
-                            <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
-                          </svg>
-                    </span>
-                    <span class="ms-2">Logout</span>
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
-    </div>
-    <div class="bottom-nav d-flex align-items-center justify-content-between px-2 mt-2 py-2">
-       <div class="">
-        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#" class="text-dark" style="text-decoration: none;">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
-          </ol>
-        </nav>
-        <h2 class="dashboard-text">Dashboard</h2>
-       </div>
-          <button class="create-btn py-2 px-3 rounded-pill">
-             + Create
-          </button>
-    </div>
-   </nav>
-   <main class="py-4">
-    <div class="container-fluid">
-      <div class="row mt-3">
-        <div class="col-lg-6">
-          <h2 class="folders-text">Folders</h2>
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="folder-card  rounded-3 px-3 pt-3 m-2">
-                <div class="d-flex align-items-start">
-                  <div class="folder-icon-wrapper rounded-3  p-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" style="color: #5B9A8B;" class="folder-icon" fill="currentColor" class="bi bi-folder-fill" viewBox="0 0 16 16">
-                      <path d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3m-8.322.12q.322-.119.684-.12h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981z"/>
-                    </svg>
+                    <hr>
+                    <div class="d-flex align-items-center my-3">
+                      <span class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                          class="bi bi-folder-fill" viewBox="0 0 16 16">
+                          <path
+                            d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3m-8.322.12q.322-.119.684-.12h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981z" />
+                        </svg>
+                      </span>
+                      <span class="ms-2">Your Files</span>
+                    </div>
+                    <div class="d-flex align-items-center my-3">
+                      <span class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                          class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd"
+                            d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z" />
+                          <path fill-rule="evenodd"
+                            d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z" />
+                        </svg>
+                      </span>
+                      <span class="ms-2">Logout</span>
+                    </div>
                   </div>
-                  <div class="ms-2">
-                    <p class="folder-name">Design Docs</p>
-                    <p class="file-counter">10 Files</p>
-                  </div>
-                </div>
-                <div class="d-flex align-items-center justify-content-between mt-4">
-                  <p class="space-used">290 MB used</p>
-                  <p class="folder-date">05-08-23</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="folder-card  rounded-3 px-3 pt-3 m-2">
-                <div class="d-flex align-items-start">
-                  <div class="folder-icon-wrapper rounded-3  p-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" style="color: #6B5B9A;" class="folder-icon" fill="currentColor" class="bi bi-folder-fill" viewBox="0 0 16 16">
-                      <path d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3m-8.322.12q.322-.119.684-.12h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981z"/>
-                    </svg>
-                  </div>
-                  <div class="ms-2">
-                    <p class="folder-name">Converted Files</p>
-                    <p class="file-counter">10 Files</p>
-                  </div>
-                </div>
-                <div class="d-flex align-items-center justify-content-between mt-4">
-                  <p class="space-used">98 MB used</p>
-                  <p class="folder-date">03-08-23</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="folder-card  rounded-3 px-3 pt-3 m-2">
-                <div class="d-flex align-items-start">
-                  <div class="folder-icon-wrapper rounded-3  p-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" style="color: #88995B;" class="folder-icon" fill="currentColor" class="bi bi-folder-fill" viewBox="0 0 16 16">
-                      <path d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3m-8.322.12q.322-.119.684-.12h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981z"/>
-                    </svg>
-                  </div>
-                  <div class="ms-2">
-                    <p class="folder-name">Urgent Files</p>
-                    <p class="file-counter">10 Files</p>
-                  </div>
-                </div>
-                <div class="d-flex align-items-center justify-content-between mt-4">
-                  <p class="space-used">201 MB used</p>
-                  <p class="folder-date">05-01-23</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="folder-card  rounded-3 px-3 pt-3 m-2">
-                <div class="d-flex align-items-start">
-                  <div class="folder-icon-wrapper rounded-3  p-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" style="color: #9A5A6A;" class="folder-icon" fill="currentColor" class="bi bi-folder-fill" viewBox="0 0 16 16">
-                      <path d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3m-8.322.12q.322-.119.684-.12h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981z"/>
-                    </svg>
-                  </div>
-                  <div class="ms-2">
-                    <p class="folder-name">Client's Brief</p>
-                    <p class="file-counter">10 Files</p>
-                  </div>
-                </div>
-                <div class="d-flex align-items-center justify-content-between mt-4">
-                  <p class="space-used">302 MB used</p>
-                  <p class="folder-date">24-02-23</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-6 mt-3 mt-lg-0">
-          <h2 class="folders-text">Recently Open</h2>
-          <div class="row">
+        <div class="bottom-nav d-flex align-items-center justify-content-between px-2 mt-2 py-2">
+          <div class="">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#" class="text-dark" style="text-decoration: none;">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+              </ol>
+            </nav>
+            <h2 class="dashboard-text">Dashboard</h2>
+          </div>
+          <button class="create-btn py-2 px-3 rounded-pill">
+            + Create
+          </button>
+        </div>
+      </nav>
+      <main class="py-4">
+        <div class="container-fluid">
+          <div class="row mt-3">
             <div class="col-lg-6">
-              <div class="folder-card  rounded-3 p-2 overflow-hidden">
-                  <img src="/assets/imgs/7d4812179116793.64f440f764839.png" alt="" class="img-fluid open-folder-img">
-                  <div class="d-flex align-items-center justify-content-between mt-2">
-                   <div class="">
-                    <p class="open-folder-name">UX Gemastik</p>
-                    <p class="open-folder-edit">Last edit 10:20am</p>
-                   </div>
-                   <img src="/assets/imgs/2.jpg" alt="" class="open-folder-user-img rounded-pill">
+              <h2 class="folders-text">Folders</h2>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="folder-card  rounded-3 px-3 px-lg-2 px-xl-3 pt-3 m-2">
+                    <div class="d-flex align-items-start">
+                      <div class="folder-icon-wrapper rounded-3  p-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" style="color: #5B9A8B;" class="folder-icon"
+                          fill="currentColor" class="bi bi-folder-fill" viewBox="0 0 16 16">
+                          <path
+                            d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3m-8.322.12q.322-.119.684-.12h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981z" />
+                        </svg>
+                      </div>
+                      <div class="ms-2">
+                        <p class="folder-name">Design Docs</p>
+                        <p class="file-counter">10 Files</p>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between mt-4">
+                      <p class="space-used">290 MB used</p>
+                      <p class="folder-date">05-08-23</p>
+                    </div>
                   </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="folder-card  rounded-3 px-3 pt-3 m-2 px-lg-2 px-xl-3">
+                    <div class="d-flex align-items-start">
+                      <div class="folder-icon-wrapper rounded-3  p-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" style="color: #6B5B9A;" class="folder-icon"
+                          fill="currentColor" class="bi bi-folder-fill" viewBox="0 0 16 16">
+                          <path
+                            d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3m-8.322.12q.322-.119.684-.12h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981z" />
+                        </svg>
+                      </div>
+                      <div class="ms-2">
+                        <p class="folder-name">Converted Files</p>
+                        <p class="file-counter">10 Files</p>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between mt-4">
+                      <p class="space-used">98 MB used</p>
+                      <p class="folder-date">03-08-23</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="folder-card  rounded-3 px-3 pt-3 m-2 px-lg-2 px-xl-3">
+                    <div class="d-flex align-items-start">
+                      <div class="folder-icon-wrapper rounded-3  p-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" style="color: #88995B;" class="folder-icon"
+                          fill="currentColor" class="bi bi-folder-fill" viewBox="0 0 16 16">
+                          <path
+                            d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3m-8.322.12q.322-.119.684-.12h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981z" />
+                        </svg>
+                      </div>
+                      <div class="ms-2">
+                        <p class="folder-name">Urgent Files</p>
+                        <p class="file-counter">10 Files</p>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between mt-4">
+                      <p class="space-used">201 MB used</p>
+                      <p class="folder-date">05-01-23</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="folder-card  rounded-3 px-3 pt-3 m-2 px-lg-2 px-xl-3">
+                    <div class="d-flex align-items-start">
+                      <div class="folder-icon-wrapper rounded-3  p-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" style="color: #9A5A6A;" class="folder-icon"
+                          fill="currentColor" class="bi bi-folder-fill" viewBox="0 0 16 16">
+                          <path
+                            d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3m-8.322.12q.322-.119.684-.12h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981z" />
+                        </svg>
+                      </div>
+                      <div class="ms-2">
+                        <p class="folder-name">Client's Brief</p>
+                        <p class="file-counter">10 Files</p>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between mt-4">
+                      <p class="space-used">302 MB used</p>
+                      <p class="folder-date">24-02-23</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="col-lg-6 mt-3 mt-lg-0">
-              <div class="folder-card  rounded-3 p-2 overflow-hidden">
-                  <img src="/assets/imgs/b60c13183157697.653a65b927781.png" alt="" class="img-fluid open-folder-img">
-                  <div class="d-flex align-items-center justify-content-between mt-2">
-                   <div class="">
-                    <p class="open-folder-name">Smart Home Dashboard</p>
-                    <p class="open-folder-edit">Last edit 10:20am</p>
-                   </div>
-                   <img src="/assets/imgs/4.jpg" alt="" class="open-folder-user-img rounded-pill">
+              <h2 class="folders-text">Recently Open</h2>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="folder-card  rounded-3 p-2 overflow-hidden">
+                    <img src="/assets/imgs/7d4812179116793.64f440f764839.png" alt="" class="img-fluid open-folder-img">
+                    <div class="d-flex align-items-center justify-content-between mt-2">
+                      <div class="">
+                        <p class="open-folder-name">UX Gemastik</p>
+                        <p class="open-folder-edit">Last edit 10:20am</p>
+                      </div>
+                      <img src="/assets/imgs/2.jpg" alt="" class="open-folder-user-img rounded-pill">
+                    </div>
                   </div>
+                </div>
+                <div class="col-lg-6 mt-3 mt-lg-0">
+                  <div class="folder-card  rounded-3 p-2 overflow-hidden">
+                    <img src="/assets/imgs/b60c13183157697.653a65b927781.png" alt="" class="img-fluid open-folder-img">
+                    <div class="d-flex align-items-center justify-content-between mt-2">
+                      <div class="">
+                        <p class="open-folder-name">Smart Home Dashboard</p>
+                        <p class="open-folder-edit">Last edit 10:20am</p>
+                      </div>
+                      <img src="/assets/imgs/4.jpg" alt="" class="open-folder-user-img rounded-pill">
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="container-fluid" x-data="{fileAction:false}">
-        <div class="row mt-4 mx-0">
-          <div class="col-lg-7">
-            <h2 class="folders-text">Files</h2>
-            
-              <div class="row" x-data="createDataRetriever()" x-init="getData()">
-                <template x-for="file in files">
-                    <div class="col-12 folder-card my-2 p-2">
+          <div class="container-fluid" x-data="{fileAction:false}">
+            <div class="row mt-4 mx-0">
+              <div class="col-lg-8" x-data="createDataRetriever()" x-init="getData()">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <h2 class="folders-text">Files</h2>
+                  <button class="btn border rounded-pill primary-text">View More</button>
+                </div>
+                <div class="d-none d-lg-block">
+                  <div class="row mb-4">
+                    <div class="col-lg-4 filter-text">
+                      <span class="">Document Name</span>
+                      <span class="ms-1"><i class="bi bi-chevron-down"></i></span>
+                    </div>
+                    <div class="col-lg-3 filter-text">
+                      <span class="">Last Edit</span>
+                      <span class="ms-1"><i class="bi bi-chevron-down"></i></span>
+                    </div>
+                    <div class="col-lg-2  filter-text">
+                      <span class="">File Size</span>
+                      <span class="ms-1"><i class="bi bi-chevron-down"></i></span>
+                    </div>
+                    <div class="col-lg-2 filter-text">
+                      <span class="">Member</span>
+                      <span class="ms-1"><i class="bi bi-chevron-down"></i></span>
+                    </div>
+                    <div class="col-lg-1 filter-text">
+                   </div>
+                  </div>
+                  <template x-for="file in files">
+                    <div class="row my-2 file-card rounded-3 py-2" id="file-card">
+                      <div class="col-lg-4">
+                        <div class="d-flex align-items-center">
+                          <div class="file-icon-type rounded-3 border border-secondary px-3 py-2">
+                            <i :class="file.icon" class="fs-4"></i>
+                          </div>
+                          <div class="ms-2">
+                            <p class="folder-name mt-3" x-text="file.name"></p>
+                           
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <p class="mt-3" x-text=" file.lastEdit"></p>
+                      </div>
+                      <div class="col-lg-2">
+                        <p class="mt-3" x-text=" file.fileSize"></p>
+                      </div>
+                      <div class="col-lg-2">
+                          <div class="d-flex align-items-center mt-2">
+                            <img :src="file.members.img1" alt="" class="member-img rounded-pill">
+                            <img :src="file.members.img2" alt="" class="member-img rounded-pill">
+                            <template x-if="file.members.img3">
+                              <img :src="file.members.img3" alt="" class="member-img rounded-pill">
+                            </template>
+                          </div>
+  
+                       
+                      </div>
+                      <div class="col-lg-1">
+                        <button class="btn mt-2"><i class="bi bi-three-dots-vertical fs-4"></i></button>
+                      </div>
+                    </div>
+                  </template>
+                </div>
+                <!-- mobile filles display -->
+                <div class="row">
+
+                  <template x-for="file in files">
+                   
+                    <div class="col-12 folder-card my-2 p-2 d-lg-none">
                       <div class="d-flex align-items-start justify-content-between">
                         <div class="d-flex align-items-start">
                           <div class="file-icon-type rounded-3 border border-secondary px-3 py-2">
@@ -357,8 +592,10 @@
                           </div>
                         </div>
                         <button class="btn" @click="fileAction = !fileAction">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
-                            <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                            <path
+                              d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
                           </svg>
                         </button>
                       </div>
@@ -368,150 +605,173 @@
                           <img :src="file.members.img1" alt="" class="member-img rounded-pill">
                           <img :src="file.members.img2" alt="" class="member-img rounded-pill">
                           <template x-if="file.members.img3">
-                          <img :src="file.members.img3" alt="" class="member-img rounded-pill">
-                        </template>
+                            <img :src="file.members.img3" alt="" class="member-img rounded-pill">
+                          </template>
                         </div>
-                     
+
                       </div>
                     </div>
-              </template>
-
-                <!-- Action card -->
-                <div class="card border-0 action-card" x-show="fileAction">
-                  <span class="action-option my-1 px-2 py-1">
-                    <span class="me-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-text" viewBox="0 0 16 16">
-                        <path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5"/>
-                        <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"/>
-                      </svg>
-                    </span>
-                    Open
-                  </span>
-                  <span class="action-option my-1 px-2 py-1">
-                    <span class="me-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-arrow-down" viewBox="0 0 16 16">
-                        <path d="M8.5 6.5a.5.5 0 0 0-1 0v3.793L6.354 9.146a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 10.293z"/>
-                        <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/>
-                      </svg>
-                    </span>
-                    Download
-                  </span>
-                  <span class="action-option my-1 px-2 py-1">
-                    <span class="me-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
-                        <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5m-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3"/>
-                      </svg>
-                    </span>
-                    Share
-                  </span>
-                  <span class="action-option my-1 px-2 py-1">
-                    <span class="me-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-                        <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
-                        <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z"/>
-                      </svg>
-                    </span>
-                    Copy Link
-                  </span>
-                  <span class="action-option my-1 px-2 py-1">
-                    <span class="me-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
-                        <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
-                      </svg>
-                    </span>
-                    Move to Trash
-                  </span>
-                </div>
-
+                  </template>
                 
-              </div>
-           
-          </div>
-          <div class="col-lg-5 mt-3 p-0">
-            <div class="storage-info-wrapper p-2">
-              <div class="storage-info p-3 rounded">
-                <div class="d-flex align-items-center justify-content-between">
-                  <p class="">Your Storage</p>
-                  <p class="storage-left">25% Left</p>
+
+                  <!-- Action card -->
+                  <div class="card border-0 action-card" x-show="fileAction">
+                    <span class="action-option my-1 px-2 py-1">
+                      <span class="me-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-file-earmark-text" viewBox="0 0 16 16">
+                          <path
+                            d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5" />
+                          <path
+                            d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z" />
+                        </svg>
+                      </span>
+                      Open
+                    </span>
+                    <span class="action-option my-1 px-2 py-1">
+                      <span class="me-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-file-earmark-arrow-down" viewBox="0 0 16 16">
+                          <path
+                            d="M8.5 6.5a.5.5 0 0 0-1 0v3.793L6.354 9.146a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 10.293z" />
+                          <path
+                            d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z" />
+                        </svg>
+                      </span>
+                      Download
+                    </span>
+                    <span class="action-option my-1 px-2 py-1">
+                      <span class="me-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-share" viewBox="0 0 16 16">
+                          <path
+                            d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5m-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3" />
+                        </svg>
+                      </span>
+                      Share
+                    </span>
+                    <span class="action-option my-1 px-2 py-1">
+                      <span class="me-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-link" viewBox="0 0 16 16">
+                          <path
+                            d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z" />
+                          <path
+                            d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z" />
+                        </svg>
+                      </span>
+                      Copy Link
+                    </span>
+                    <span class="action-option my-1 px-2 py-1">
+                      <span class="me-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-trash3" viewBox="0 0 16 16">
+                          <path
+                            d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5" />
+                        </svg>
+                      </span>
+                      Move to Trash
+                    </span>
+                  </div>
+
+
                 </div>
-                <p class="used-space">75.2 of 100 GB Used</p>
-                <div class="progress mt-2" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
-                  <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75.2%; background-color: #5B9A8B;"></div>
+
+              </div>
+              <!-- upgrade section -->
+              <div class="col-lg-4 mt-3 p-0">
+                <div class="storage-info-wrapper p-2">
+                  <div class="storage-info p-3 rounded">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <p class="">Your Storage</p>
+                      <p class="storage-left">25% Left</p>
+                    </div>
+                    <p class="used-space">75.2 of 100 GB Used</p>
+                    <div class="progress mt-2" role="progressbar" aria-label="Success example" aria-valuenow="25"
+                      aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
+                      <div class="progress-bar progress-bar-striped progress-bar-animated"
+                        style="width: 75.2%; background-color: #5B9A8B;"></div>
+                    </div>
+                    <div class="storage-upgrade p-3 mt-3 rounded">
+                      <p class="upgrade-text fw-bold">Upgrade Storage</p>
+                      <p class="storage-prompt">Your Storage is almost full. Let's upgrade your plan</p>
+                      <div class="d-grid">
+                        <button class="storage-btn py-2  rounded-pill">
+                          Upgrade Plan
+                        </button>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class=" mt-3 px-3">
+                    <p class="fw-bold">Total Files</p>
+                    <div class="row">
+                      <div class="col storage-total rounded p-2 m-1">
+                        <div class="d-flex align-items-start">
+                          <div class="folder-icon-wrapper rounded-3  py-2 px-3">
+                            <i class="bi bi-folder-fill primary-text fs-3"></i>
+                          </div>
+                          <div class="ms-2">
+                            <p class="storage-total-text">Documents</p>
+                            <p class="storage-total-storage">2.5GB</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col storage-total rounded p-2 m-1">
+                        <div class="d-flex align-items-start">
+                          <div class="folder-icon-wrapper rounded-3  py-2 px-3">
+                            <i class="bi bi-card-image  primary-text fs-3"></i>
+                          </div>
+                          <div class="ms-2">
+                            <p class="storage-total-text">Medias</p>
+                            <p class="storage-total-storage ">4.2GB</p>
+                          </div>
+                        </div>
+                      </div>
+                     
+                    </div>
+                    <div class="row">
+                      <div class="col storage-total rounded p-2 m-1">
+                        <div class="d-flex align-items-start">
+                          <div class="folder-icon-wrapper rounded-3  py-2 px-3">
+                            <i class="bi bi-music-note primary-text fs-3"></i>
+                          </div>
+                          <div class="ms-2">
+                            <p class="storage-total-text">Musics</p>
+                            <p class="storage-total-storage">1.5GB</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col storage-total rounded p-2 m-1">
+                        <div class="d-flex align-items-start">
+                          <div class="folder-icon-wrapper rounded-3  py-2 px-3">
+                            <i class="bi bi-collection-fill primary-text fs-3"></i>
+                          </div>
+                          <div class="ms-2">
+                            <p class="storage-total-text">Others</p>
+                            <p class="storage-total-storage">5.5GB</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
                 </div>
-                <div class="storage-upgrade p-3 mt-3 rounded">
-                  <p class="upgrade-text fw-bold">Upgrade Storage</p>
-                  <p class="storage-prompt">Your Storage is almost full. Let's upgrade your plan</p>   
-                 <div class="d-grid">
-                   <button class="storage-btn py-2  rounded-pill">
-                     Upgrade Plan
-                  </button>
-                 </div>
               </div>
-              <div class=" mt-3">
-                <p class="fw-bold">Total Files</p>
-                <div class="row row=cols-2">
-                  <div class="col-lg-6 storage-total rounded p-2 m-1">
-                    <div class="d-flex align-items-start">
-                      <div class="folder-icon-wrapper rounded-3  py-2 px-3">
-                        <i class="bi bi-folder-fill primary-text fs-3"></i>
-                      </div>
-                      <div class="ms-2">
-                        <p class="storage-total-text">Documents</p>
-                        <p class="storage-total-storage">2.5GB</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6 storage-total rounded p-2 m-1">
-                    <div class="d-flex align-items-start">
-                      <div class="folder-icon-wrapper rounded-3  py-2 px-3">
-                        <i class="bi bi-card-image  primary-text fs-3"></i>
-                      </div>
-                      <div class="ms-2">
-                        <p class="storage-total-text">Medias</p>
-                        <p class="storage-total-storage ">4.2GB</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6 storage-total rounded p-2 m-1">
-                    <div class="d-flex align-items-start">
-                      <div class="folder-icon-wrapper rounded-3  py-2 px-3">
-                        <i class="bi bi-music-note primary-text fs-3"></i>
-                      </div>
-                      <div class="ms-2">
-                        <p class="storage-total-text">Musics</p>
-                        <p class="storage-total-storage">1.5GB</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6 storage-total rounded p-2 m-1">
-                    <div class="d-flex align-items-start">
-                      <div class="folder-icon-wrapper rounded-3  py-2 px-3">
-                        <i class="bi bi-collection-fill primary-text fs-3"></i>
-                      </div>
-                      <div class="ms-2">
-                        <p class="storage-total-text">Others</p>
-                        <p class="storage-total-storage">5.5GB</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              </div>
-             
-              
             </div>
           </div>
         </div>
-      </div>
+      </main>
     </div>
-   </main>
+  </div>
 
 
-    <!-- bootstrap js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Alpine JS -->
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
-    <script src="/assets/app.js"></script>
+  <!-- bootstrap js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Alpine JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
+  <script src="/assets/app.js"></script>
 </body>
 
 </html>
