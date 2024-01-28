@@ -21,9 +21,9 @@
 
 <body>
   <div class="row mx-0">
-    <div class="col-lg-2 d-none d-lg-block">
-      <div class="px-3 px-lg-2 side-nav">
-        <div class="d-flex align-items-start justify-content-between py-3 sticky-top logo-wrapper" id="logo-wrapper">
+    <div class="col-lg-2 d-none d-lg-block" id="sideNav">
+      <div class="px-3 px-lg-2 side-nav" >
+        <div class="d-flex align-items-start justify-content-between py-3 sticky-top logo-wrapper" id="logowrapper">
           <div class="d-flex align-items-start">
             <img src="/assets/imgs/logo.png" alt="" class="logo">
             <div class="ms-1">
@@ -128,25 +128,21 @@
         </div>
       </div>
     </div>
-    <div class="col-lg-10 main-section px-0">
+    <div class="col-lg-10 main-section px-0" id="mainSection">
       <!-- header -->
       <!-- mobile-nav -->
-      <nav class="navbar bg-white overflow-hidden sticky-top">
+      <nav class="navbar  overflow-hidden sticky-top" id="navbar">
         <div class="d-flex align-items-center justify-content-between top-nav px-2 pb-2" style="overflow: hidden;">
-          <button class="nav-btn btn btn-sm me-1 d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#sidenav"
+          <button class="nav-btn btn btn-sm me-1 d-lg-none " id="navbtn" data-bs-toggle="offcanvas" data-bs-target="#sidenav"
             aria-controls="staticBackdrop">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list"
-              viewBox="0 0 16 16">
-              <path fill-rule="evenodd"
-                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
-            </svg>
+            <i class="bi bi-list fs-3"></i>
           </button>
           <!-- mobile-sidenave -->
           <div class="offcanvas offcanvas-start hide" tabindex="-1" id="sidenav" aria-labelledby="offcanvasLabel">
             <div class="d-flex align-items-start justify-content-between p-3">
               <div class="">
                 <img src="/assets//imgs/logo.png" alt="" class="logo">
-                <h1 class="logo-text">Sky Vault</h1>
+                <h1 class="logo-text" id="logoText">Sky Vault</h1>
               </div>
               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
@@ -247,7 +243,7 @@
             </div>
           </div>
           <!-- searchbox -->
-          <div class="d-flex align-items-center form-control rounded-pill search-wrapper">
+          <div class="d-flex align-items-center p-2 rounded-pill search-wrapper" id="searchwrapper">
             <span class="me-2">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
                 viewBox="0 0 16 16">
@@ -255,12 +251,12 @@
                   d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
               </svg>
             </span>
-            <input type="text" class="search-box" placeholder="search your files">
+            <input type="text" class="search-box" placeholder="search your files" id="searchBox">
           </div>
           <div class="d-flex align-items-center">
             <!-- theme-switcher -->
             <div class="theme-switcher mx-2">
-              <button class="btn btn-sm rounded-pill ms-2" id="dark-theme" onclick="darkModeSwitcher()">
+              <button class="btn btn-sm rounded-pill ms-2" id="darktheme" onclick="darkModeSwitcher()">
                 <div class="d-flex align-items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                     class="bi bi-moon-stars-fill" viewBox="0 0 16 16">
@@ -272,7 +268,7 @@
                   <span class="ms-2 d-none d-lg-block">Dark Mode</span>
                 </div>
               </button>
-              <button class="btn btn-sm rounded-pill ms-2" id="light-theme" onclick="lightModeSwitcher()">
+              <button class="btn btn-sm rounded-pill ms-2" id="lighttheme" onclick="lightModeSwitcher()">
                 <div class="d-flex align-items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                     class="bi bi-brightness-low-fill" viewBox="0 0 16 16">
@@ -283,8 +279,8 @@
                 </div>
               </button>
             </div>
-            <button class="mx-2  btn notification-bell rounded-pill d-none d-lg-block">
-              <i class="bi bi-bell-fill"></i>
+            <button class="mx-2  btn notification-bell rounded-pill d-none d-lg-block" id="notificationbell">
+              <i class="bi bi-bell-fill "></i>
             </button>
             <!-- user-profile -->
             <div class="user-profile mx-3" data-bs-toggle="offcanvas" data-bs-target="#profilebackdrop"
@@ -374,10 +370,10 @@
         </div>
         <div class="bottom-nav d-flex align-items-center justify-content-between px-2 mt-2 py-2">
           <div class="">
-            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" id="bottomnav">
               <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#" class="text-dark" style="text-decoration: none;">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                <li class="breadcrumb-item"><a href="#"  id="breadcrumbitem" class="breadcrumbitem" >Home</a></li>
+                <li class="breadcrumb-item active " id="breadcrumbitem1" aria-current="page">Dashboard</li>
               </ol>
             </nav>
             <h2 class="dashboard-text">Dashboard</h2>
@@ -387,14 +383,14 @@
           </button>
         </div>
       </nav>
-      <main class="py-4">
+      <main class="py-4" id="main">
         <div class="container-fluid">
-          <div class="row mt-3">
+          <div class="row mt-3 gx-2">
             <div class="col-lg-6">
               <h2 class="folders-text">Folders</h2>
               <div class="row">
                 <div class="col-lg-6">
-                  <div class="folder-card  rounded-3 px-3 px-lg-2 px-xl-3 pt-3 m-2">
+                  <div class="foldercard  rounded-3 px-3 px-lg-2 px-xl-3 pt-3 m-2" id="">
                     <div class="d-flex align-items-start">
                       <div class="folder-icon-wrapper rounded-3  p-3 p-lg-2">
                         <svg xmlns="http://www.w3.org/2000/svg" style="color: #5B9A8B;" class="folder-icon"
@@ -415,7 +411,7 @@
                   </div>
                 </div>
                 <div class="col-lg-6">
-                  <div class="folder-card  rounded-3 px-3 pt-3 m-2 px-lg-2 px-xl-3">
+                  <div class="foldercard  rounded-3 px-3 pt-3 m-2 px-lg-2 px-xl-3">
                     <div class="d-flex align-items-start">
                       <div class="folder-icon-wrapper rounded-3 p-lg-2  p-3">
                         <svg xmlns="http://www.w3.org/2000/svg" style="color: #6B5B9A;" class="folder-icon"
@@ -438,7 +434,7 @@
               </div>
               <div class="row">
                 <div class="col-lg-6">
-                  <div class="folder-card  rounded-3 px-3 pt-3 m-2 px-lg-2 px-xl-3">
+                  <div class="foldercard  rounded-3 px-3 pt-3 m-2 px-lg-2 px-xl-3">
                     <div class="d-flex align-items-start">
                       <div class="folder-icon-wrapper rounded-3 p-lg-2 p-3">
                         <svg xmlns="http://www.w3.org/2000/svg" style="color: #88995B;" class="folder-icon"
@@ -459,7 +455,7 @@
                   </div>
                 </div>
                 <div class="col-lg-6">
-                  <div class="folder-card  rounded-3 px-3 pt-3 m-2 px-lg-2 px-xl-3">
+                  <div class="foldercard  rounded-3 px-3 pt-3 m-2 px-lg-2 px-xl-3">
                     <div class="d-flex align-items-start">
                       <div class="folder-icon-wrapper rounded-3 p-lg-2 p-3">
                         <svg xmlns="http://www.w3.org/2000/svg" style="color: #9A5A6A;" class="folder-icon"
@@ -485,7 +481,7 @@
               <h2 class="folders-text">Recently Open</h2>
               <div class="row">
                 <div class="col-lg-6">
-                  <div class="folder-card  rounded-3 p-2 overflow-hidden">
+                  <div class="foldercard  rounded-3 p-2 overflow-hidden">
                     <img src="/assets/imgs/7d4812179116793.64f440f764839.png" alt="" class="img-fluid open-folder-img">
                     <div class="d-flex align-items-center justify-content-between mt-2">
                       <div class="">
@@ -497,7 +493,7 @@
                   </div>
                 </div>
                 <div class="col-lg-6 mt-3 mt-lg-0">
-                  <div class="folder-card  rounded-3 p-2 overflow-hidden">
+                  <div class="foldercard  rounded-3 p-2 overflow-hidden">
                     <img src="/assets/imgs/b60c13183157697.653a65b927781.png" alt="" class="img-fluid open-folder-img">
                     <div class="d-flex align-items-center justify-content-between mt-2">
                       <div class="">
@@ -540,7 +536,7 @@
                    </div>
                   </div>
                   <template x-for="file in files">
-                    <div class="row my-2 file-card rounded-3 py-2" id="file-card">
+                    <div class="row my-2 filecard rounded-3 py-2 me-2">
                       <div class="col-lg-4">
                         <div class="d-flex align-items-center">
                           <div class="file-icon-type rounded-3 border border-secondary px-3 py-2">
@@ -570,7 +566,7 @@
                        
                       </div>
                       <div class="col-lg-1">
-                        <button class="btn mt-2"><i class="bi bi-three-dots-vertical fs-4"></i></button>
+                        <button class="btn mt-2"><i class="bi bi-three-dots-vertical fs-4 filter-text"></i></button>
                       </div>
                     </div>
                   </template>
@@ -580,7 +576,7 @@
 
                   <template x-for="file in files">
                    
-                    <div class="col-12 folder-card my-2 p-2 d-lg-none">
+                    <div class="col-12 foldercard my-2 p-2 d-lg-none rounded" id="foldercard">
                       <div class="d-flex align-items-start justify-content-between">
                         <div class="d-flex align-items-start">
                           <div class="file-icon-type rounded-3 border border-secondary px-3 py-2">
@@ -680,8 +676,8 @@
               </div>
               <!-- upgrade section -->
               <div class="col-lg-4 mt-3 p-0">
-                <div class="storage-info-wrapper p-2">
-                  <div class="storage-info p-3 rounded">
+                <div class="storage-info-wrapper p-2 rounded" id="storageInfoWrapper">
+                  <div class="storage-info p-3 rounded" id="storageInfo">
                     <div class="d-flex align-items-center justify-content-between">
                       <p class="">Your Storage</p>
                       <p class="storage-left">25% Left</p>
@@ -692,7 +688,7 @@
                       <div class="progress-bar progress-bar-striped progress-bar-animated"
                         style="width: 75.2%; background-color: #5B9A8B;"></div>
                     </div>
-                    <div class="storage-upgrade p-3 mt-3 rounded">
+                    <div class="storage-upgrade p-3 mt-3 rounded" id="storageUpgrade">
                       <p class="upgrade-text fw-bold">Upgrade Storage</p>
                       <p class="storage-prompt">Your Storage is almost full. Let's upgrade your plan</p>
                       <div class="d-grid">

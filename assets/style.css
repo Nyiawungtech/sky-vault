@@ -12,6 +12,12 @@ dark-theme-text-color: #878989 */
     
    
 }
+.navbar{
+    background-color: #fff;
+}
+.nav-btn{
+    color: black;
+}
 .logo-wrapper{
     background-color: #fff;
 }
@@ -29,6 +35,7 @@ dark-theme-text-color: #878989 */
 
 .search-wrapper{
     width: 200px;
+    border: 1px solid rgb(211, 211, 211);
 }
 .search-box{
     border: none;
@@ -44,7 +51,7 @@ dark-theme-text-color: #878989 */
     background-color: #5B9A8B;
     color: #fff;
 }
-#light-theme{
+#lighttheme{
     display: none;
 }
 .user-img{
@@ -97,10 +104,14 @@ main{
     background-color: #F9F9F9;
     height: fit-content;
 }
+.breadcrumbitem{
+    color: #000;
+    text-decoration: none;
+}
 .folders-text{
     font-size: 20px;
 }
-.folder-card{
+.foldercard{
     background-color: #fff;
   border: none;
   box-shadow: 0px 10px 20px  rgba(10, 10, 10, 0.041);
@@ -223,12 +234,12 @@ main{
 .filter-text{
     color: rgb(170, 170, 170);
 }
-.file-card{
+.filecard{
   background-color: #fff;
   border: 1px solid rgb(211, 211, 211);
   cursor: pointer;
 }
-.file-card:hover{
+.filecard:hover{
   background-color: #fff;
   border: none;
   box-shadow: 0px 10px 20px  rgba(10, 10, 10, 0.041);
@@ -288,6 +299,29 @@ main{
     .open-folder-user-img{
         width: 30px;
         height: 30px;
+        object-fit: cover;
+    }
+}
+@media screen and (min-width:1440px){
+    .logo{
+        width: 80px;
+        
+    }
+    .slogan{
+        font-size: 13px;
+        margin-top: -9px;
+        color: rgb(150, 150, 150);
+    }
+    .folder-name{
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .open-folder-name{
+        font-size: 16px;
+    }
+    .open-folder-user-img{
+        width: 40px;
+        height: 40px;
         object-fit: cover;
     }
 }
